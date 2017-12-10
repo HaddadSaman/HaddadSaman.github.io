@@ -18,7 +18,7 @@
     
     .button_1{
         height:38px;
-        background:#e8491d;
+        background:#2174ce;
         border:0;
         padding-left: 20px;
         padding-right: 20px;
@@ -86,8 +86,8 @@
     
     /*showcase*/
     #showcase{
-        min-height:500px;
-        background:url('wave.jpg') no-repeat 0px -200px;
+        min-height:400px;
+        background:url('wave.jpg') no-repeat 0px -300px;
         text-align:center;
         color:#35424a;
 
