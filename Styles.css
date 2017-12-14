@@ -11,6 +11,17 @@
         overflow:hidden;
     }
     
+    .element {
+	text-shadow:
+		-1px -1px 0 #ffffff,
+		1px -1px 0 #ffffff,
+		-1px 1px 0 #ffffff,
+		1px 1px 0 #ffffff;
+        
+    }
+    
+    
+    
     ul{
         margin:0;
         padding:0;
@@ -138,12 +149,13 @@
     #boxes .box{
         float:left;
         text-align: center;
-        width:30%;
-        padding:10px;
+        width:27%;
+        padding:3%;
     }
     
     #boxes .box img{
-        width:180px;
+        height:275px;
+        width:100%;
     }
     /*sidebar*/
     
