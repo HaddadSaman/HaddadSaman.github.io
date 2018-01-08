@@ -149,8 +149,8 @@
     #boxes .box{
         float:left;
         text-align: center;
-        width:27%;
-        padding:3%;
+        width:20%;
+        padding:5%;
     }
     
     #boxes .box img{
