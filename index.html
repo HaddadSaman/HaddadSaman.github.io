@@ -23,11 +23,100 @@
         </header>
         
         <section id="showcase">
-            <div class="container">
-                <h1 class="element">Sales by the Students of Citrus</h1>
-                <h2 class="element">Everything on this website is made by and for the students of citrus. Please reserve your item and come to Mr.Carpenter's room to pick it up.</h2>
+    <head>
+        <title>Video Background</title>
+        
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .content-section {
+                width: 50%;
+                margin: 0 auto;
+                padding: 15% 0;
+            }
+            .content-section h1 {
+                text-transform: uppercase;
+                margin-bottom: 15px;
+            }
+            .content-section p {
+                font-size: 1.2em;
+                color: #333;
+            }
+            .video-section {
+                position: relative;
+                width: 100%;
+                max-height: 600px;
+                overflow: hidden;
+            }
+            #video-elem {
+                width: 100%;
+            }
+            .video-overlay {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(255, 255, 255, 0.8);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            .video-overlay:hover {
+                opacity: 0.45;
+            }
+            .video-overlay h1 {
+                position: absolute;
+                left: 50%;
+                top: 20%;
+                transform: translateX(-50%) translateY(-50%);
+                text-transform: uppercase;
+                font-size: 3em;
+                color: #000;
+                text-align: center;
+            }
+            .main-content {
+                position: fixed;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0,5);
+                color: #f1f1f1;
+                width: 100%;
+                padding: 20px;
+            }
+            #myBtn {
+                width: 100px;
+                font-size: 18px;
+                padding: 10px;
+                border: none;
+                background: #e8491d;
+                color: #fff;
+                cursor: pointer;
+                position: absolute;
+                bottom: 1620%;
+            }
+            #myBtn:hover {
+                background: #ddd;
+                color: blue;
+            }
+        </style>
+    
+    
+    </head>
+    <body>
+        <div class="video-section">
+            <video id="video-elem" preload="auto" autoplay="true" loop="true" muted="muted">
+                <source src="WavesVid.mp4" type="video/mp4">
+                video not supported
+            </video>
+            <div class="video-overlay">
+                <h1> Citrus Valley's Goto website</h1>
             </div>
-        </section>
+        </div>
+    </body>
+    </div>
+    
+    </section>
         
         <section id="newsletter">
             <div class="container">
