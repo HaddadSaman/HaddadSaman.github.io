@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Processing Demo</title>
+        <script type="text/javascript" src="./js/Sam.js"></script>
+    </head>
+    <body>
+        <script type="text/processing">
+            PImage back;
+            PImage face;
+            PFont Font1;
+            int count = 0; int y = 0; int Vy = 0;
+            int gameState = 0;
+            
+            
+            void setup(){
+              size(800,600);
+              back = loadImage("./js/img/Background.png");
+              face = loadImage("./js/img/Mario2.png");
+              Font1 = createFont("Arial Bold Italic", 18);
+              //image(back,0,0);
+            }
+            
+            void draw(){
+              if (gameState ==0){
+                image(back, count, 0);
+                image(back,  width + count, 0);
+                count--;
+                if (count == -width){
+                  count = 0;
+                }
+                image(face, 100, y);
+                if (count%3 == 0){
+                  Vy += 1.5;
+                }
+                y = y + Vy;
+              }
+              if (y < -60 || y > 600){
+                gameState = 1;
+              }
+              
+              if (gameState == 1){
+                background(0,0,0);
+                fill(0);
+                rect(217.5, 168, 275, 55, 5);
+                fill(255,0,0);
+                textFont(Font1);
+                textSize(50);
+                text("Restart? ;)", 230, 210.5);
+                if (mouseX > 217.5 && mouseX < 492.5 && mouseY > 168 && mouseY < 218){
+                  background(252,255,244);
+                  fill(0);
+                  rect(217.5, 168, 275, 55, 5);
+                  fill(252,255,244);
+                  textFont(Font1);
+                  textSize(50);
+                  text("Restart?", 230, 210.5);
+                  if(mousePressed){
+                    gameState = 0; y = 50;
+                  }
+                }
+              }
+            }
+            
+            
+            void mousePressed(){
+              Vy = -10;
+            }
+        </script>
+        <canvas id="sketch" style="border: 1px solid black;"></canvas>
+    </body>
+</html>
